@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import CountryCard from "./CountryCard"
-import { ScrollTop } from "./scrollTop";
+import { ScrollTop } from "./ScrollTop";
 
 
 const Pagination = ({ data, itemsPerPage }) => {
