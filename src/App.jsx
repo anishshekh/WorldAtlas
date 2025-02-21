@@ -5,7 +5,6 @@ import About from '../pages/About'
 import Country from '../pages/Country'
 import CountryDetails from '../pages/CountryDetails'
 import AppLayOut from '../layouts/AppLayOut'
-import { useEffect } from 'react'
 import VisitAbout from '../pages/VisitAbout'
 
 
