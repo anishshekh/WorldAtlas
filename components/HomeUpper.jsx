@@ -23,7 +23,7 @@ const HomeUpper = () => {
         </div>
 
         <div className="imageContainer">
-          <img src="/images/world-map.jpeg" alt="" />
+          <img src="/images/world-map.webp" alt="" />
         </div>
 
       </div>
