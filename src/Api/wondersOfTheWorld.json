@@ -1,0 +1,130 @@
+{
+  "wonders": [
+    {
+      "id": 1,
+      "name": "Great Wall of China",
+      "image": "https://i.pinimg.com/474x/a8/dd/37/a8dd378b561a8c4fc30b0e6c7384f265.jpg",
+      "image_visit": "https://i.pinimg.com/474x/10/82/dc/1082dc5d418462b0afe869fbe20dfcbf.jpg",
+      "interesting_facts": [
+        "The Great Wall is over 2,300 years old.",
+        "It stretches approximately 13,171 miles (21,196 km) in length.",
+        "Contrary to popular belief, it cannot be seen from space with the naked eye."
+      ],
+      "unique_facts": [
+        "The wall was built by multiple dynasties, primarily to protect against invasions.",
+        "It is not a single continuous wall but a series of walls and fortifications."
+      ],
+      "country": "China",
+      "build_date": "7th century BC (with later additions)",
+      "city": "Northern China"
+    },
+    {
+      "id": 2,
+      "name": "Petra",
+      "image": "https://i.pinimg.com/474x/48/27/a2/4827a263cf2c76d27d8fe1c1c88dab6c.jpg",
+      "image_visit": "https://i.pinimg.com/474x/52/44/a8/5244a8938196dbdd4d697075920c5444.jpg",
+      "interesting_facts": [
+        "Petra is also known as the 'Rose City' due to the color of the stone.",
+        "It was the capital of the Nabataean Kingdom in the 4th century BC.",
+        "The city was lost to the Western world for over 500 years."
+      ],
+      "unique_facts": [
+        "Petra's most famous structure, Al-Khazneh (The Treasury), was carved directly into a sandstone cliff.",
+        "The city has a sophisticated water conduit system."
+      ],
+      "country": "Jordan",
+      "build_date": "5th century BC",
+      "city": "Petra"
+    },
+    {
+      "id": 3,
+      "name": "Christ the Redeemer",
+      "image": "https://i.pinimg.com/474x/20/cc/32/20cc32af6d309281ac433e1889028e5c.jpg",
+      "image_visit": "https://i.pinimg.com/474x/68/45/aa/6845aacf47522a216c0123a1ad4e386f.jpg",
+      "interesting_facts": [
+        "The statue stands 98 feet (30 meters) tall, with arms stretching 92 feet (28 meters) wide.",
+        "It is made of reinforced concrete and soapstone.",
+        "It is one of the most iconic symbols of Christianity."
+      ],
+      "unique_facts": [
+        "The statue was struck by lightning in 2014, damaging its fingers.",
+        "It was constructed in pieces and transported to the summit of Corcovado Mountain."
+      ],
+      "country": "Brazil",
+      "build_date": "1931",
+      "city": "Rio de Janeiro"
+    },
+    {
+      "id": 4,
+      "name": "Machu Picchu",
+      "image": "https://i.pinimg.com/474x/72/af/ca/72afcae3b7f498fb166e831d78032e44.jpg",
+      "image_visit": "https://i.pinimg.com/474x/44/e6/3f/44e63fd319fe4ca864502c5819b45a6e.jpg",
+      "interesting_facts": [
+        "Machu Picchu was built without the use of mortar, wheels, or iron tools.",
+        "It was rediscovered in 1911 by American historian Hiram Bingham.",
+        "The site is located 7,970 feet (2,430 meters) above sea level."
+      ],
+      "unique_facts": [
+        "It is believed to have been a royal estate or sacred religious site for Inca rulers.",
+        "The stones are so precisely cut that not even a knife blade can fit between them."
+      ],
+      "country": "Peru",
+      "build_date": "15th century",
+      "city": "Cusco Region"
+    },
+    {
+      "id": 5,
+      "name": "Chichen Itza",
+      "image": "https://i.pinimg.com/474x/2a/5e/91/2a5e91e3d6b2bdfc49b4499cc7604c62.jpg",
+      "image_visit": "https://i.pinimg.com/474x/5b/73/2d/5b732dd1b9182c8fd5f80f3537cbc623.jpg",
+      "interesting_facts": [
+        "Chichen Itza was one of the largest Maya cities.",
+        "The pyramid El Castillo has 365 steps, representing the days of the year.",
+        "During the spring and autumn equinoxes, shadows create the illusion of a serpent descending the pyramid."
+      ],
+      "unique_facts": [
+        "The site was a major center of political and economic power in the Maya civilization.",
+        "It features a large ball court where ritual games were played."
+      ],
+      "country": "Mexico",
+      "build_date": "600 AD",
+      "city": "Yucatán"
+    },
+    {
+      "id": 6,
+      "name": "Roman Colosseum",
+      "image": "https://i.pinimg.com/474x/15/e3/63/15e3632afe233f13823de8a4e63690a9.jpg",
+      "image_visit": "https://i.pinimg.com/474x/ed/97/80/ed9780c702cc5fad611de438b188cf84.jpg",
+      "interesting_facts": [
+        "The Colosseum could hold between 50,000 and 80,000 spectators.",
+        "It was used for gladiatorial contests, animal hunts, and public spectacles.",
+        "The structure was damaged by earthquakes and stone robbers over the centuries."
+      ],
+      "unique_facts": [
+        "It had a retractable awning called the velarium to shield spectators from the sun.",
+        "The Colosseum was built using concrete and sand, a revolutionary construction technique at the time."
+      ],
+      "country": "Italy",
+      "build_date": "80 AD",
+      "city": "Rome"
+    },
+    {
+      "id": 7,
+      "name": "Taj Mahal",
+      "image": "https://i.pinimg.com/474x/09/37/d7/0937d76c20c7c6832179ea9612c90f11.jpg",
+      "image_visit": "https://i.pinimg.com/474x/07/1d/3b/071d3b4a5ebb658209e103bcb56a4fae.jpg",
+      "interesting_facts": [
+        "The Taj Mahal was built by Mughal Emperor Shah Jahan in memory of his wife Mumtaz Mahal.",
+        "It took approximately 22 years and 20,000 workers to complete.",
+        "The white marble changes color depending on the time of day."
+      ],
+      "unique_facts": [
+        "The Taj Mahal is a UNESCO World Heritage Site and is considered a symbol of eternal love.",
+        "The construction materials were brought from all over Asia, including jade, crystal, and turquoise."
+      ],
+      "country": "India",
+      "build_date": "1632-1653",
+      "city": "Agra"
+    }
+  ]
+}

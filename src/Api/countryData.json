@@ -1,0 +1,74 @@
+[
+  {
+    "country": "United States",
+    "capital": "Washington D.C.",
+    "population": "335.9 million (2023)",
+    "fact": "Home to the Statue of Liberty and the Grand Canyon."
+  },
+  {
+    "country": "India",
+    "capital": "New Delhi",
+    "population": "1.428 billion (2023)",
+    "fact": "The world's largest democracy."
+  },
+  {
+    "country": "China",
+    "capital": "Beijing",
+    "population": "1.45 billion (2023)",
+    "fact": "Home to the Great Wall of China."
+  },
+  {
+    "country": "Indonesia",
+    "capital": "Jakarta",
+    "population": "277.5 million (2023)",
+    "fact": "The world's largest archipelago."
+  },
+  {
+    "country": "Pakistan",
+    "capital": "Islamabad",
+    "population": "235.8 million (2023)",
+    "fact": "Known for its ancient Indus Valley Civilization."
+  },
+  {
+    "country": "Brazil",
+    "capital": "Brasília",
+    "population": "216.4 million (2023)",
+    "fact": "Home to the Amazon rainforest."
+  },
+  {
+    "country": "Nigeria",
+    "capital": "Abuja",
+    "population": "218.5 million (2023)",
+    "fact": "The most populous country in Africa."
+  },
+  {
+    "country": "Bangladesh",
+    "capital": "Dhaka",
+    "population": "171.2 million (2023)",
+    "fact": "High population density."
+  },
+  {
+    "country": "Russia",
+    "capital": "Moscow",
+    "population": "144.5 million (2023)",
+    "fact": "The largest country by land area."
+  },
+  {
+    "country": "Mexico",
+    "capital": "Mexico City",
+    "population": "131.9 million (2023)",
+    "fact": "Famous for its vibrant culture and delicious food."
+  },
+  {
+    "country": "Japan",
+    "capital": "Tokyo",
+    "population": "125.5 million (2023)",
+    "fact": "Known for its advanced technology and unique culture."
+  },
+  {
+    "country": "Ethiopia",
+    "capital": "Addis Ababa",
+    "population": "119.2 million (2023)",
+    "fact": "Origin of coffee."
+  }
+]
