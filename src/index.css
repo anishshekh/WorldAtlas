@@ -20,17 +20,21 @@ body {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   width: 100%;
-  /* background-color: var(--bg-Color); */
   background: hwb(0 9% 90%);
   padding: 2rem;
   box-shadow: 0 0 10px -1px rgb(108, 108, 108);
   top: 0%;
-  right: 0%;
-  left: 0%;
-  z-index: 10;
+  z-index: 1000;
 }
+
+.navbar.sticky {
+  background-color: rgba(26, 26, 26, 0.95);
+  top: -1px;
+  padding: 1.4rem 2rem;
+}
+
 
 h1,
 h2,
@@ -77,55 +81,43 @@ a,
   font-size: 1.7rem;
   position: relative;
   color: #25b09b;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -3px;
+    left: 0%;
+    background-color: #25b09b;
+    transition: width 0.8s 0s ease-in-out;
+  }
+
+  &:hover {
+    color: #00ffd9;
+  }
 }
 
 .ham-icon {
   display: none;
 }
 
-.navList::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  bottom: -3px;
-  left: 0%;
-  background-color: #25b09b;
-  transition: width 0.8s 0s ease-in-out;
-}
-
 .active {
   color: #fff;
-  /* color: #5f6fad; */
   transition: color 0.4s ease-in-out;
 
-}
+  &::after {
+    width: 100%;
+  }
 
-.active::after {
-  width: 100%;
-}
-
-
-.navList:hover {
-  color: #00ffd9;
-}
-
-.active:hover {
-  color: #fff;
-}
-
-.back-heading {
-  height: 8rem;
-  width: 100%;
-}
-
-.header-icons {
-  display: none;
+  &:hover {
+    color: #fff;
+  }
 }
 
 
 .container {
-  max-width: 90rem;
+  max-width: 100rem;
   margin: auto;
 }
 
@@ -146,11 +138,15 @@ ul li {
   list-style: none;
 }
 
+.header-icons {
+  display: none;
+}
+
 /* Home Page */
 
 .grid-two-coulumns {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   padding: 5rem 0 3rem 0;
   gap: 5rem;
   margin-top: 1rem;
@@ -202,18 +198,27 @@ button {
 .exploring-btn {
   border: none;
   padding: 0.9rem 1.9rem;
-}
 
+  &::after,
+  ::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background: conic-gradient(from var(--angle), #0c63e7, #ff4800, #d11149, #0c63e7);
+    z-index: -1;
+    border-radius: 12px;
+    animation: animated-btn 2s linear infinite;
+  }
 
-.exploring-btn::after,
-.exploring-btn::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  background: conic-gradient(from var(--angle), #0c63e7, #ff4800, #d11149, #0c63e7);
-  z-index: -1;
-  border-radius: 12px;
-  animation: animated-btn 2s linear infinite;
+  &::before {
+    z-index: -2;
+    filter: blur(20px);
+    opacity: 0.6;
+  }
+
+  &:hover {
+    color: brown;
+  }
 }
 
 @property --angle {
@@ -221,7 +226,6 @@ button {
   initial-value: 53deg;
   inherits: false;
 }
-
 
 @keyframes animated-btn {
   from {
@@ -233,16 +237,6 @@ button {
   }
 }
 
-.exploring-btn::before {
-  z-index: -2;
-  filter: blur(20px);
-  opacity: 0.6;
-}
-
-.exploring-btn:hover {
-  color: brown;
-}
-
 /* slider css */
 
 .wonder-card {
@@ -251,6 +245,14 @@ button {
   background-color: #121212;
   border-radius: 20px;
   position: relative;
+
+  &:hover .layer {
+    height: 65%;
+  }
+
+  &:hover .layer button {
+    display: block;
+  }
 }
 
 .images-name {
@@ -275,20 +277,13 @@ button {
   justify-content: center;
 }
 
-.wonder-card:hover .layer {
-  height: 65%;
-}
-
-.layer button {
+.wonder-card .layer button {
   display: none;
 }
 
-.wonder-card:hover .layer button {
-  display: block;
-}
 
 .react-multiple-carousel__arrow {
-  z-index: 1;
+  z-index: 999;
   background-color: #282323;
 }
 
@@ -296,10 +291,6 @@ button {
   background-color: #25b09b;
   border: 2px solid white;
 }
-
-/* .wonder-card img:hover::after {} */
-
-/* .wonder-img-container {} */
 
 .icon {
   font-size: 1.5rem;
@@ -315,7 +306,6 @@ button {
 
 .card {
   position: relative;
-  /* margin-top: 2rem; */
   background: linear-gradient(71deg, #080509, #1a171e, #080509);
   color: white;
   border: 2px solid transparent;
@@ -344,19 +334,19 @@ button {
 
 .bg-blue-box {
   position: relative;
-}
 
-.bg-blue-box ::after {
-  position: absolute;
-  top: -1px;
-  bottom: -1px;
-  left: -1px;
-  right: -1px;
-  content: "";
-  z-index: -1;
-  border-radius: 45px;
-  background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e);
+  &::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 45px;
+    background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e);
 
+  }
 }
 
 .headingAbout {
@@ -419,7 +409,6 @@ form input {
   border: 1px solid rgba(169, 169, 255, 0.4);
   padding: 10px;
   font-size: 1.4rem;
-  /* color: rgb(211, 211, 211); */
   color: white;
   outline: none;
   letter-spacing: 0.1em;
@@ -428,7 +417,6 @@ form input {
 
 .message {
   background-color: transparent;
-  /* color: rgb(211, 211, 211); */
   color: white;
   width: 100%;
   font-size: 2.1em;
@@ -519,10 +507,10 @@ ul li .Link {
   color: gray;
   font-size: 1.2rem;
   font-weight: 400;
-}
 
-ul li .Link:hover {
-  color: #5f6fad;
+  &:hover {
+    color: #5f6fad;
+  }
 }
 
 /* country ka css */
@@ -758,13 +746,9 @@ ul li .Link:hover {
 
 @media (max-width:998px) {
   .container {
-    max-width: 85%;
+    max-width: 90%;
     margin: auto;
   }
-
-  /* header {
-    padding: 2.5rem;
-  } */
 
   .logoContainer {
     font-size: 1rem;
@@ -783,7 +767,7 @@ ul li .Link:hover {
 
   .mobile-menu {
     position: absolute;
-    top: 7.5rem;
+    top: 6rem;
     right: 0%;
     left: 0%;
     width: 100%;
@@ -799,16 +783,17 @@ ul li .Link:hover {
     opacity: 0;
     transform: translateY(-10px);
     border-radius: 0 0 20px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     pointer-events: auto;
+
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
 
-  .mobile-menu.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
 
   .overlay {
     position: fixed;
@@ -817,18 +802,16 @@ ul li .Link:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 1000;
     pointer-events: none;
     display: none;
+
+    &.activeted {
+      display: block;
+    }
   }
 
-  .overlay.active {
-    display: block;
-  }
-  /* .mobile-navList{
-    color: red;
-  } */
-  .header-icons {
+  .overlay .header-icons {
     font-size: 2rem;
     color: white;
     display: block;
@@ -871,24 +854,24 @@ ul li .Link:hover {
   }
 
   .country-card {
-    align-items: center;
-    justify-content: center;
     gap: 2rem;
+    padding: 2rem 5rem;
+
   }
 
   .flags img {
-    height: 100px;
+    height: 100%;
     width: 100%;
   }
 
   .country-card h2 {
-    font-size: 2.5rem;
-    line-height: 3rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
   }
 
   .country-card .card-description {
-    line-height: 3rem;
-    font-size: 1.4rem;
+    line-height: 3.7rem;
+    font-size: 1.7rem;
   }
 
   .country-details .grid-two-coulumns {

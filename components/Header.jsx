@@ -12,33 +12,49 @@ import { IoMdContact } from "react-icons/io";
 
 const Header = () => {
 
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const menuRef = useRef(null);
 
-  
+
   const menuToggle = () => {
     setShowMenu(!showMenu)
   }
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setShowMenu(false);
       }
     };
-    
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const isMobile = () => window.innerWidth <= 998;
-  
+
   return (
 
-    <div className="back-heading">
-
-      <header>
+    <>
+      <header className={`navbar ${isSticky ? "sticky" : ""}`}>
 
         <div className="container">
 
@@ -106,7 +122,7 @@ const Header = () => {
               </li>
 
             </ul>
-            
+
             <div className="ham-icon">
               <button onClick={menuToggle}>
                 {!showMenu ? <GiHamburgerMenu /> : <MdClear />}
@@ -119,11 +135,12 @@ const Header = () => {
 
       {/* Overlay */}
       <div
-        className={`overlay ${showMenu ? 'active' : ''}`}
+        className={`overlay ${showMenu ? 'activeted' : ''}`}
         onClick={menuToggle}>
       </div>
+    </>
 
-    </div>
+
   )
 }
 export default Header
